@@ -3,11 +3,14 @@
 //creating response array
 $response = array();
  
-if($_SERVER['REQUEST_METHOD']=='POST'){
+if($_SERVER['REQUEST_METHOD']=='GET'){
  
     //getting values
-    $teamName = $_POST['name'];
-    $memberCount = $_POST['member'];
+    //$teamName = $_POST['name'];
+    //$memberCount = $_POST['member'];
+
+    $userId = $_GET['userId'];
+    $username = $_GET['username'];    
  
     //including the db operation file
     require_once '../includes/DBOperation.php';
