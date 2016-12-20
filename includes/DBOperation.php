@@ -12,18 +12,22 @@ class DbOperation
         // opening db connection
         $db = new DbConnect();
         $this->conn = $db->connect();
+        echo "DbOperation";
     }
  
     //Function to create a new user
-    public function createTeam($name, $memberCount)
+    public function createMems($userId, $username)
     {
         $stmt = $this->conn->prepare("INSERT INTO team(userId, username) values(?, ?)");
-        $stmt->bind_param("si", $name, $memberCount);
+        $stmt->bind_param("si", $userId, $username);
         $result = $stmt->execute();
         $stmt->close();
         if ($result) {
+            echo "true";
             return true;
+            
         } else {
+            echo "false";
             return false;
         }
     }
