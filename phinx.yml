@@ -6,10 +6,10 @@ environments:
     default_database: development
     production:
         adapter: mysql
-        host: db.thewagerwall.com
-        name: wagerwall_prod
-        user: dev
-        pass: 'PbvL2!wDL'
+        host: http://35.162.48.100/
+        name: memhere0316
+        user: root
+        pass: 'keen'
         port: 3306
         charset: utf8
 
@@ -24,10 +24,10 @@ environments:
 
     development:
         adapter: mysql
-        host: db.thewagerwall.com
-        name: wagerwall_dev
-        user: dev
-        pass: 'PbvL2!wDL'
+        host: 35.162.48.100
+        name: memhere0316
+        user: mem
+        pass: 'keen'
         port: 3306
         charset: utf8
 
