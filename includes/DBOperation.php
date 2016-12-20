@@ -19,9 +19,9 @@ class DbOperation
     public function createMems($userId, $username)
     {
         echo "createMems";
-        
-        $stmt = $this->conn->prepare("INSERT INTO team(userId, username) values(?, ?)");
-        $stmt->bind_param("si", $userId, $username);
+
+        $stmt = $this->conn->prepare("INSERT INTO mems(userId, username) values(?, ?)");
+        $stmt->bind_param("ss", $userId, $username);
         $result = $stmt->execute();
         $stmt->close();
         if ($result) {
