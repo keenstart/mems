@@ -1,0 +1,41 @@
+paths:
+    migrations: %%PHINX_CONFIG_DIR%%/migrations
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+    production:
+        adapter: mysql
+        host: db.thewagerwall.com
+        name: wagerwall_prod
+        user: dev
+        pass: 'PbvL2!wDL'
+        port: 3306
+        charset: utf8
+
+    cron:
+        adapter: mysql
+        host: wager-wall-automation-db.c9qywvvrkpna.ap-southeast-1.rds.amazonaws.com
+        name: ww_cron
+        user: wagerwalladmin
+        pass: 2rLRsg6E6kztdev
+        port: 3306
+        charset: utf8 
+
+    development:
+        adapter: mysql
+        host: db.thewagerwall.com
+        name: wagerwall_dev
+        user: dev
+        pass: 'PbvL2!wDL'
+        port: 3306
+        charset: utf8
+
+    testing:
+        adapter: mysql
+        host: localhost
+        name: testing_db
+        user: root
+        pass: ''
+        port: 3306
+        charset: utf8
