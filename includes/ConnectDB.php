@@ -6,7 +6,6 @@ class DbConnect
  
     function __construct()
     {
-        echo "ConnectDB";
     }
  
     /**
@@ -16,7 +15,7 @@ class DbConnect
     function connect()
     {
         require_once 'Config.php';
-        echo DB_HOST;
+
         // Connecting to mysql database
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
  

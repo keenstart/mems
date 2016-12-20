@@ -3,32 +3,30 @@
 //creating response array
 $response = array();
  
-if($_SERVER['REQUEST_METHOD']=='GET'){
+if($_SERVER['REQUEST_METHOD']=='POST'){
  
     //getting values
-    //$teamName = $_POST['name'];
-    //$memberCount = $_POST['member'];
+    $userId = $_POST['userId'];
+    $username = $_POST['username'];
 
-    $userId = $_GET['userId'];
-    $username = $_GET['username'];    
- echo $userId ;
+    //$userId = $_GET['userId'];
+    //$username = $_GET['username'];    
+
 
 
     //including the db operation file
     require_once '../includes/DBOperation.php';
  
     $db = new DbOperation();
-   echo $username ;
+
     //inserting values 
     if($db->createMems($userId,$username)){
         $response['error']=false;
         $response['message']='Team added successfully';
-        echo $response['message'];
     }else{
  
         $response['error']=true;
         $response['message']='Could not add team';
-        echo $response['message'];
     }
  
 }else{
