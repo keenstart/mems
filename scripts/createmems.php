@@ -11,7 +11,9 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
 
     $userId = $_GET['userId'];
     $username = $_GET['username'];    
- 
+ echo $userId ;
+  echo $username ;
+  
     //including the db operation file
     require_once '../includes/DBOperation.php';
  
