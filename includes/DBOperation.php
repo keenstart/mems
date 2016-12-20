@@ -18,6 +18,8 @@ class DbOperation
     //Function to create a new user
     public function createMems($userId, $username)
     {
+        echo "createMems";
+        
         $stmt = $this->conn->prepare("INSERT INTO team(userId, username) values(?, ?)");
         $stmt->bind_param("si", $userId, $username);
         $result = $stmt->execute();

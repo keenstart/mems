@@ -12,21 +12,23 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
     $userId = $_GET['userId'];
     $username = $_GET['username'];    
  echo $userId ;
-  echo $username ;
-  
+
+
     //including the db operation file
     require_once '../includes/DBOperation.php';
  
     $db = new DbOperation();
- 
+   echo $username ;
     //inserting values 
     if($db->createMems($userId,$username)){
         $response['error']=false;
         $response['message']='Team added successfully';
+        echo $response['message'];
     }else{
  
         $response['error']=true;
         $response['message']='Could not add team';
+        echo $response['message'];
     }
  
 }else{
