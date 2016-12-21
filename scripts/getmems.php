@@ -10,23 +10,30 @@ $response = array();
  
     $db = new DbOperation();
     $result = $db->getMems();
+
 	if ($result)
 	{
 		// If so, then create a results array and a temporary one
 		// to hold the data
-		$resultArray = array();
-		$tempArray = array();
+		//$resultArray = array();
+		//$tempArray = array();
 	 
 		// Loop through each row in the result set
-		while($row = $result->fetch_object())
-		{
-			// Add each row into our results array
-			$tempArray = $row;
-		    array_push($resultArray, $tempArray);
-		}
+	    while($e=mysqli_fetch_assoc($result)){
+	       // $distance = (DistanceBetween( $latitudev, $longitudev,$e['latitude'],$e['longitude']) * 1000 ) * 3.281;
+	        //$distance = DistanceBetween( $latitudev, $longitudev,$e['latitude'],$e['longitude'])  * 3280.8;
+	        
+	        
+	        // if($distance < $e['radius']/*Feet*/)  { 
+	             $output[]=$e;
+	             //echo $e['latitude'].", ".$e['longitude'] .'='.$distance. '//';
+	         //}
+	         //$output[]=$e;
+	      
+	    }
 	 
 		// Finally, encode the array to JSON and output the results
-		echo json_encode($resultArray);
+		echo json_encode($output);
 	}	else{
     	$response['error']=true;
     	$response['message']='You are not authorizeds';
