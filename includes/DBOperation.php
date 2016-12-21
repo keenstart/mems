@@ -12,7 +12,7 @@ class DbOperation
         // opening db connection
         $db = new DbConnect();
         $this->conn = $db->connect();
-        //echo "DbOperation";
+
     }
  
     //Function to create a new user
