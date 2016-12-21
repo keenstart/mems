@@ -17,7 +17,8 @@ $response = array();
 		// to hold the data
 		//$resultArray = array();
 		//$tempArray = array();
-	 
+	 echo "testy";
+	 var_dump($result);
 		// Loop through each row in the result set
 	    while($e=mysqli_fetch_assoc($result)){
 	       // $distance = (DistanceBetween( $latitudev, $longitudev,$e['latitude'],$e['longitude']) * 1000 ) * 3.281;
