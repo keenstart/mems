@@ -10,8 +10,8 @@ $response = array();
  
     $db = new DbOperation();
     $result = $db->getMems();
-var_dump($result1);
-
+var_dump($result);
+echo "get1";
 	if ($result)
 	{
 		// If so, then create a results array and a temporary one
