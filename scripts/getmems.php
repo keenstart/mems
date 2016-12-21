@@ -10,6 +10,7 @@ $response = array();
  
     $db = new DbOperation();
     $result = $db->getMems();
+var_dump($result1);
 
 	if ($result)
 	{
@@ -18,7 +19,7 @@ $response = array();
 		//$resultArray = array();
 		//$tempArray = array();
 	 echo "testy";
-	 var_dump($result);
+
 		// Loop through each row in the result set
 	    while($e=mysqli_fetch_assoc($result)){
 	       // $distance = (DistanceBetween( $latitudev, $longitudev,$e['latitude'],$e['longitude']) * 1000 ) * 3.281;

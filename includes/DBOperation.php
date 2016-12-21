@@ -38,6 +38,7 @@ class DbOperation
         echo "get";
 
         $result = $this->conn->query("SELECT * FROM mem");
+        var_dump($result)
         //$stmt->bind_param("ss", $userId, $username);
         //$result = $stmt->execute();
         $this->conn->close();
