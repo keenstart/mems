@@ -35,7 +35,7 @@ class DbOperation
     //Function to create a new user
     public function getMems()
     {
-        //echo "createMems";
+        echo "get";
 
         $result = $this->conn->query("SELECT * FROM mem");
         //$stmt->bind_param("ss", $userId, $username);
