@@ -31,5 +31,17 @@ class DbOperation
             return false;
         }
     }
+
+    //Function to create a new user
+    public function getMems($userId, $username)
+    {
+        //echo "createMems";
+
+        $stmt = $this->conn->prepare("SELECT * FROM mem");
+        //$stmt->bind_param("ss", $userId, $username);
+        $result = $stmt->execute();
+        $stmt->close();
+        return $result;
+    }    
  
 }
