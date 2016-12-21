@@ -40,7 +40,7 @@ class DbOperation
         $result = $this->conn->query("SELECT * FROM mem");
         //$stmt->bind_param("ss", $userId, $username);
         //$result = $stmt->execute();
-        $stmt->close();
+        $this->conn->close();
         return $result;
     }    
  

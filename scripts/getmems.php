@@ -34,11 +34,12 @@ $response = array();
 	 
 		// Finally, encode the array to JSON and output the results
 		echo json_encode($output);
-	}	else{
+	}	
+	/*else{
     	$response['error']=true;
     	$response['message']='You are not authorizeds';
     	echo json_encode($response);
-	}    
+	} */   
 
 /*}else{
     $response['error']=true;
