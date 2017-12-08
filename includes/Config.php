@@ -6,7 +6,7 @@
  * Time: 7:58 PM
  */
  
-define('DB_USERNAME', 'mem');
-define('DB_PASSWORD', 'keen');
-define('DB_HOST', '35.162.48.100');
-define('DB_NAME', 'memhere0316');
+define('DB_USERNAME', 'xxxxxxxxx');
+define('DB_PASSWORD', 'xxxxxxxxx');
+define('DB_HOST', 'xxxxxxxxxx');
+define('DB_NAME', 'xxxxxxxxxxx');
